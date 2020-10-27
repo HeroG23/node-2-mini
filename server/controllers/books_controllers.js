@@ -17,6 +17,7 @@ module.exports ={
         res.status(200).send(books)
     },
     update: (req, res) => {
+        /*let index = books.findIndex(e => e.id === + req.params.id)*/
         let index = null;
         books.forEach((book, i) => {
           if (book.id === Number(req.params.id)) index = i;
@@ -29,6 +30,7 @@ module.exports ={
         res.status(200).send(books);
       },
     delete:(req, res) => {
+        /*let index = books.findIndex(e => e.id === + req.params.id)*/
         let index = null;
         books.forEach((book, i) => {
             if(book.id === Number (req.params.id)) index = i;
